@@ -1,0 +1,1325 @@
+# Copyright (C) 2026 Wilder Labs
+# This file is distributed under the GPLv2 or later.
+msgid ""
+msgstr ""
+"Project-Id-Version: Finishcoat 1.0.0\n"
+"Report-Msgid-Bugs-To: https://wordpress.org/support/plugin/finishcoat\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"POT-Creation-Date: 2026-10-28T04:57:00+00:00\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"X-Generator: Finishcoat tests/tools/make-pot.php\n"
+"X-Domain: finishcoat\n"
+
+#. Plugin Name of the plugin
+#: finishcoat.php
+msgid "Finishcoat"
+msgstr ""
+
+#. Plugin URI of the plugin
+#: finishcoat.php
+msgid "https://wilderlabs.studio/finishcoat/"
+msgstr ""
+
+#. Description of the plugin
+#: finishcoat.php
+msgid "Your clients pin notes, replies and photos to any spot on your pages, and you keep the final say."
+msgstr ""
+
+#. Author of the plugin
+#: finishcoat.php
+msgid "Wilder Labs"
+msgstr ""
+
+#. Author URI of the plugin
+#: finishcoat.php
+msgid "https://wilderlabs.studio"
+msgstr ""
+
+#: includes/access.php:148 includes/access.php:171 includes/access.php:186
+msgid "Client"
+msgstr ""
+
+#: includes/access.php:358
+msgid "Too many tries. Try again in an hour."
+msgstr ""
+
+#: includes/access.php:367 includes/front.php:170
+msgid "Enter your review code."
+msgstr ""
+
+#: includes/access.php:467
+msgid "Review codes"
+msgstr ""
+
+#: includes/access.php:468
+msgid "Clients need a code to read and send notes. Send each person or team the review link for their code: opening it saves the code in their browser for 90 days."
+msgstr ""
+
+#: includes/access.php:470
+msgid "No code works right now, so only logged-in editors can see notes. Add a code below."
+msgstr ""
+
+#: includes/access.php:474 includes/access.php:482 includes/access.php:514
+msgid "Label"
+msgstr ""
+
+#: includes/access.php:474
+msgid "Code"
+msgstr ""
+
+#: includes/access.php:474
+msgid "Created"
+msgstr ""
+
+#: includes/access.php:474 includes/front.php:218 includes/notes.php:925
+msgid "Status"
+msgstr ""
+
+#: includes/access.php:474
+msgid "Actions"
+msgstr ""
+
+#: includes/access.php:484
+msgid "Rename"
+msgstr ""
+
+#. translators: %s: date the code was revoked.
+#: includes/access.php:490
+#, php-format
+msgid "Revoked %s"
+msgstr ""
+
+#. translators: %s: date the code was revoked.
+#: includes/access.php:491
+msgid "Active"
+msgstr ""
+
+#: includes/access.php:495
+msgid "Copy review link"
+msgstr ""
+
+#: includes/access.php:498
+msgid "Make a new code for this label? The old code and its link stop working."
+msgstr ""
+
+#: includes/access.php:498
+msgid "Regenerate"
+msgstr ""
+
+#: includes/access.php:501
+msgid "Revoke this code? Anyone using it is asked for a new one."
+msgstr ""
+
+#: includes/access.php:501
+msgid "Revoke"
+msgstr ""
+
+#: includes/access.php:505
+msgid "Remove from the list"
+msgstr ""
+
+#: includes/access.php:514
+msgid "Marketing lead"
+msgstr ""
+
+#: includes/access.php:515
+msgid "Add code"
+msgstr ""
+
+#: includes/access.php:516
+msgid "The label shows next to the name on each note, so you know who sent what."
+msgstr ""
+
+#. translators: %d: most codes allowed.
+#: includes/access.php:520
+#, php-format
+msgid "You have the most codes a site can hold (%d). Remove a revoked code to add another."
+msgstr ""
+
+#: includes/access.php:530 includes/notes.php:778 includes/photos.php:1047 includes/photos.php:1186 includes/settings.php:615 includes/settings.php:685
+msgid "You are not allowed to do that."
+msgstr ""
+
+#: includes/access.php:545
+msgid "You have the most codes a site can hold."
+msgstr ""
+
+#. translators: %s: code label.
+#: includes/access.php:550
+#, php-format
+msgid "Code added: %s. Copy its review link and send it to the client."
+msgstr ""
+
+#: includes/access.php:553
+msgid "That code is gone."
+msgstr ""
+
+#: includes/access.php:556
+msgid "Give the code a label."
+msgstr ""
+
+#. translators: %s: code label.
+#: includes/access.php:560
+#, php-format
+msgid "Code renamed: %s."
+msgstr ""
+
+#. translators: %s: code label.
+#: includes/access.php:566
+#, php-format
+msgid "New code made for %s. The old code stopped working. Send the new review link."
+msgstr ""
+
+#. translators: %s: code label.
+#: includes/access.php:572
+#, php-format
+msgid "Code revoked: %s."
+msgstr ""
+
+#: includes/access.php:575
+msgid "Revoked code removed from the list."
+msgstr ""
+
+#: includes/access.php:577
+msgid "Unknown action."
+msgstr ""
+
+#: includes/front.php:158
+msgid "just now"
+msgstr ""
+
+#. translators: %d: number of minutes.
+#: includes/front.php:160
+#, php-format
+msgid "%d min ago"
+msgstr ""
+
+#. translators: %d: number of hours.
+#: includes/front.php:162
+#, php-format
+msgid "%d hr ago"
+msgstr ""
+
+#. translators: %d: number of hours.
+#: includes/front.php:163
+msgid "The notes service did not answer. Try again in a minute."
+msgstr ""
+
+#. translators: %d: number of hours.
+#: includes/front.php:164
+msgid "No connection. Check your internet and try again."
+msgstr ""
+
+#: includes/front.php:165
+msgid "That code did not work. Check it and try again."
+msgstr ""
+
+#: includes/front.php:166 includes/settings.php:109 includes/settings.php:559
+msgid "Suggestions"
+msgstr ""
+
+#: includes/front.php:167
+msgid "Continue"
+msgstr ""
+
+#: includes/front.php:168
+msgid "Enter your review code"
+msgstr ""
+
+#: includes/front.php:169
+msgid "Your web designer sent you this code."
+msgstr ""
+
+#: includes/front.php:171
+msgid "Checking..."
+msgstr ""
+
+#: includes/front.php:172
+msgid "Could not load notes."
+msgstr ""
+
+#. translators: %s: label of the tab, such as Suggestions.
+#: includes/front.php:174
+#, php-format
+msgid "Close %s"
+msgstr ""
+
+#. translators: %s: label of the tab, such as Suggestions.
+#: includes/front.php:175 includes/notes.php:30
+msgid "New"
+msgstr ""
+
+#. translators: %s: label of the tab, such as Suggestions.
+#: includes/front.php:176 includes/notes.php:31
+msgid "Noted"
+msgstr ""
+
+#: includes/front.php:177 includes/notes.php:32
+msgid "In progress"
+msgstr ""
+
+#: includes/front.php:178 includes/notes.php:33
+msgid "Done"
+msgstr ""
+
+#: includes/front.php:179
+msgid "Show"
+msgstr ""
+
+#: includes/front.php:180
+msgid "What would you change, keep or ask about on this page?"
+msgstr ""
+
+#: includes/front.php:181
+msgid "Your name"
+msgstr ""
+
+#: includes/front.php:182
+msgid "Pin it to a spot"
+msgstr ""
+
+#: includes/front.php:183
+msgid "Send"
+msgstr ""
+
+#: includes/front.php:184 includes/notes.php:558
+msgid "New notes are paused right now."
+msgstr ""
+
+#: includes/front.php:185
+msgid "Add photos"
+msgstr ""
+
+#: includes/front.php:186
+msgid "Try my photo here"
+msgstr ""
+
+#: includes/front.php:187
+msgid "Photos to send"
+msgstr ""
+
+#: includes/front.php:188
+msgid "I own these photos or have permission to use them."
+msgstr ""
+
+#: includes/front.php:189
+msgid "Leave a suggestion"
+msgstr ""
+
+#: includes/front.php:190
+msgid "Want a different photo? Point at any photo on the page and click Try my photo here. Only you see it until you suggest it."
+msgstr ""
+
+#: includes/front.php:191
+msgid "Want a different photo? Tap Try my photo here, then tap a photo on the page. Only you see it until you suggest it."
+msgstr ""
+
+#: includes/front.php:192
+msgid "Forget this code"
+msgstr ""
+
+#: includes/front.php:193
+msgid "Made with Finishcoat"
+msgstr ""
+
+#. translators: %s: site name.
+#: includes/front.php:195
+#, php-format
+msgid "Notes on this page go straight to %s."
+msgstr ""
+
+#. translators: %s: site name.
+#: includes/front.php:196
+msgid "Notes on this page go straight to the site owner."
+msgstr ""
+
+#. translators: %s: site name.
+#: includes/front.php:197
+msgid "Open"
+msgstr ""
+
+#: includes/front.php:198
+msgid "All"
+msgstr ""
+
+#: includes/front.php:199
+msgid "Open full size"
+msgstr ""
+
+#. translators: %s: name of the person who sent the photo.
+#: includes/front.php:201
+#, php-format
+msgid "Photo from %s, open full size"
+msgstr ""
+
+#. translators: %s: name of the person who sent the photo.
+#: includes/front.php:202
+msgid "the client"
+msgstr ""
+
+#. translators: %s: name of the person who sent the photo.
+#: includes/front.php:203 includes/photos.php:1142
+msgid "The photo on the page now"
+msgstr ""
+
+#. translators: %s: name of the spot on the page.
+#: includes/front.php:204 includes/photos.php:1098 includes/photos.php:1142
+msgid "Before"
+msgstr ""
+
+#: includes/front.php:205 includes/photos.php:1144
+msgid "After"
+msgstr ""
+
+#. translators: %s: name of the spot on the page, such as a heading.
+#: includes/front.php:207
+#, php-format
+msgid "Suggested for “%s”"
+msgstr ""
+
+#. translators: %s: name of the spot on the page, such as a heading.
+#: includes/front.php:208
+msgid "a photo"
+msgstr ""
+
+#. translators: %s: name of the spot on the page, such as a heading.
+#: includes/front.php:209
+msgid "Show the spot on the page"
+msgstr ""
+
+#. translators: %d: note number on this page.
+#: includes/front.php:211
+#, php-format
+msgid "Note %d, show the spot on the page"
+msgstr ""
+
+#. translators: %d: note number on this page.
+#: includes/front.php:212
+msgid "Someone"
+msgstr ""
+
+#. translators: %d: note number on this page.
+#: includes/front.php:213
+msgid "On"
+msgstr ""
+
+#. translators: %s: name of the spot on the page, such as a heading.
+#: includes/front.php:215
+#, php-format
+msgid "Pinned to “%s”"
+msgstr ""
+
+#. translators: %s: name of the spot on the page, such as a heading.
+#: includes/front.php:216 includes/notes.php:1030
+msgid "Open on the page"
+msgstr ""
+
+#. translators: %s: name of the spot on the page, such as a heading.
+#: includes/front.php:217 includes/notes.php:965
+msgid "Reply"
+msgstr ""
+
+#: includes/front.php:219 includes/photos.php:1256
+msgid "Delete"
+msgstr ""
+
+#: includes/front.php:220
+msgid "Delete for good?"
+msgstr ""
+
+#: includes/front.php:221
+msgid "That did not work."
+msgstr ""
+
+#: includes/front.php:222
+msgid "Loading notes..."
+msgstr ""
+
+#: includes/front.php:223
+msgid "No notes on this page."
+msgstr ""
+
+#: includes/front.php:224
+msgid "No notes on this page yet. Write one below. Use Pin it to a spot if it is about one part of the page."
+msgstr ""
+
+#: includes/front.php:225
+msgid "Everything on this page is marked done."
+msgstr ""
+
+#: includes/front.php:226
+msgid "Nothing here yet."
+msgstr ""
+
+#. translators: 1: label of the tab, 2: number of open notes.
+#: includes/front.php:228
+#, php-format
+msgid "%1$s, %2$d open on this page"
+msgstr ""
+
+#. translators: 1: note number, 2: name of the person.
+#: includes/front.php:230
+#, php-format
+msgid "Note %1$d from %2$s"
+msgstr ""
+
+#. translators: %s: name of the person.
+#: includes/front.php:232
+#, php-format
+msgid "Replying to %s"
+msgstr ""
+
+#. translators: %d: note number.
+#: includes/front.php:234
+#, php-format
+msgid "note %d"
+msgstr ""
+
+#. translators: %d: note number.
+#: includes/front.php:235 includes/photos.php:1260
+msgid "Cancel"
+msgstr ""
+
+#. translators: %d: note number.
+#: includes/front.php:236
+msgid "Write a reply"
+msgstr ""
+
+#: includes/front.php:237
+msgid "this spot"
+msgstr ""
+
+#: includes/front.php:238
+msgid "Click or tap a photo on the page to try your own photo there."
+msgstr ""
+
+#: includes/front.php:239
+msgid "Click the spot your note is about."
+msgstr ""
+
+#: includes/front.php:240
+msgid "That spot has no photo. Click or tap a photo."
+msgstr ""
+
+#: includes/front.php:241
+msgid "Your new note goes here"
+msgstr ""
+
+#. translators: %s: name of the photo on the page.
+#: includes/front.php:243
+#, php-format
+msgid "Pinned to the photo “%s”"
+msgstr ""
+
+#. translators: %s: name of the photo on the page.
+#: includes/front.php:244
+msgid "Do not suggest it"
+msgstr ""
+
+#. translators: %s: name of the photo on the page.
+#: includes/front.php:245
+msgid "Remove pin"
+msgstr ""
+
+#: includes/front.php:246
+msgid "Move the pin"
+msgstr ""
+
+#. translators: %s: file name.
+#: includes/front.php:248
+#, php-format
+msgid "Only photos (JPEG, PNG, WebP) can be sent. %s was left out."
+msgstr ""
+
+#. translators: 1: file name, 2: largest photo in MB.
+#: includes/front.php:250
+#, php-format
+msgid "%1$s is too big to send. The limit is %2$d MB a photo."
+msgstr ""
+
+#. translators: %s: file name.
+#: includes/front.php:252
+#, php-format
+msgid "%s is empty. Try another photo."
+msgstr ""
+
+#. translators: %d: most photos on one note.
+#: includes/front.php:254
+#, php-format
+msgid "You can send up to %d photos with a note."
+msgstr ""
+
+#. translators: %s: name of the photo on the page.
+#: includes/front.php:256
+#, php-format
+msgid "Your photo for “%s”. Only you see it on the page. Send to suggest it."
+msgstr ""
+
+#. translators: %s: name of the photo on the page.
+#: includes/front.php:257
+msgid "1 photo to send"
+msgstr ""
+
+#. translators: %d: number of photos.
+#: includes/front.php:259
+#, php-format
+msgid "%d photos to send"
+msgstr ""
+
+#. translators: %s: file name.
+#: includes/front.php:261
+#, php-format
+msgid "Remove %s"
+msgstr ""
+
+#. translators: %s: file name.
+#: includes/front.php:262
+msgid "Sending..."
+msgstr ""
+
+#. translators: %s: file name.
+#. translators: %d: number of photos.
+#: includes/front.php:263 includes/notes.php:627
+msgid "Write a note first."
+msgstr ""
+
+#: includes/front.php:264 includes/notes.php:591
+msgid "Add your name so we know who it is from."
+msgstr ""
+
+#: includes/front.php:265 includes/notes.php:614
+msgid "Tick the box to confirm you can share these photos."
+msgstr ""
+
+#: includes/front.php:266
+msgid "Uploading..."
+msgstr ""
+
+#: includes/front.php:267
+msgid "Saving..."
+msgstr ""
+
+#. translators: %d: percent uploaded. %% is a percent sign.
+#: includes/front.php:269
+#, php-format
+msgid "Uploading... %d%%"
+msgstr ""
+
+#. translators: %d: percent uploaded. %% is a percent sign.
+#: includes/front.php:270
+msgid "Those photos are too big to send at once. Try fewer."
+msgstr ""
+
+#. translators: %d: percent uploaded. %% is a percent sign.
+#: includes/front.php:271
+msgid "Reply sent."
+msgstr ""
+
+#: includes/front.php:272
+msgid "Thanks. Your photo suggestion is in, pinned to that spot."
+msgstr ""
+
+#: includes/front.php:273
+msgid "Thanks. Your note is in and the site owner has been told."
+msgstr ""
+
+#: includes/front.php:274
+msgid "Background photo"
+msgstr ""
+
+#. translators: %d: number of the photo on the page.
+#: includes/front.php:276
+#, php-format
+msgid "Photo %d"
+msgstr ""
+
+#. translators: %d: number of the photo on the page.
+#: includes/front.php:277
+msgid "Your photo on the page"
+msgstr ""
+
+#. translators: %d: number of the photo on the page.
+#: includes/front.php:278
+msgid "Only you can see this photo here. Nothing is sent until you suggest it."
+msgstr ""
+
+#: includes/front.php:279
+msgid "Suggest this photo"
+msgstr ""
+
+#: includes/front.php:280
+msgid "Try another"
+msgstr ""
+
+#: includes/front.php:281
+msgid "Put the original back"
+msgstr ""
+
+#: includes/front.php:282
+msgid "Add a note about this photo (optional)"
+msgstr ""
+
+#: includes/front.php:283 includes/notes.php:924
+msgid "Page"
+msgstr ""
+
+#. translators: %s: label of the tab, such as Suggestions.
+#: includes/front.php:285
+#, php-format
+msgid "%s board"
+msgstr ""
+
+#. translators: %s: label of the tab, such as Suggestions.
+#: includes/front.php:287
+#, php-format
+msgid "Every note left on this site, in one place. Use the %s tab on the right edge of any page to add one."
+msgstr ""
+
+#. translators: %s: label of the tab, such as Suggestions.
+#: includes/front.php:288
+msgid "All pages"
+msgstr ""
+
+#. translators: %s: label of the tab, such as Suggestions.
+#: includes/front.php:289
+msgid "Everything"
+msgstr ""
+
+#. translators: %s: name of the person.
+#: includes/front.php:290 includes/notes.php:926 includes/photos.php:1120 includes/settings.php:486
+msgid "Photos"
+msgstr ""
+
+#: includes/front.php:291
+msgid "No suggestions yet."
+msgstr ""
+
+#: includes/front.php:292
+msgid "Nothing matches those filters."
+msgstr ""
+
+#. translators: %d: number of notes.
+#: includes/front.php:294
+#, php-format
+msgid "Show %d more"
+msgstr ""
+
+#. translators: %s: name of the logged-in user.
+#: includes/front.php:296
+#, php-format
+msgid "Studio mode: replying as %s"
+msgstr ""
+
+#. translators: %s: name of the logged-in user.
+#: includes/front.php:297
+msgid "the site owner"
+msgstr ""
+
+#. translators: %s: name of the logged-in user.
+#: includes/front.php:298
+msgid "Notes or photos? Leave them here."
+msgstr ""
+
+#: includes/notes.php:45 includes/notes.php:47 includes/settings.php:477
+msgid "Client notes"
+msgstr ""
+
+#: includes/notes.php:46
+msgid "Client note"
+msgstr ""
+
+#: includes/notes.php:48
+msgid "Notes"
+msgstr ""
+
+#: includes/notes.php:49
+msgid "Edit note"
+msgstr ""
+
+#: includes/notes.php:50
+msgid "View note"
+msgstr ""
+
+#: includes/notes.php:51
+msgid "Search notes"
+msgstr ""
+
+#: includes/notes.php:52
+msgid "No notes yet."
+msgstr ""
+
+#: includes/notes.php:53
+msgid "No notes in the trash."
+msgstr ""
+
+#: includes/notes.php:465 includes/notes.php:549
+msgid "This site is not set up for notes."
+msgstr ""
+
+#: includes/notes.php:545
+msgid "Notes can only be sent from this site's pages."
+msgstr ""
+
+#: includes/notes.php:554
+msgid "This page was open for a long time. Reload it and try again."
+msgstr ""
+
+#: includes/notes.php:584
+msgid "This page is not set up for notes."
+msgstr ""
+
+#: includes/notes.php:599 includes/notes.php:734
+msgid "That note is gone."
+msgstr ""
+
+#: includes/notes.php:617
+msgid "Choose the photo you want to suggest."
+msgstr ""
+
+#. translators: %s: name of the spot on the page, such as a heading.
+#: includes/notes.php:622
+#, php-format
+msgid "Suggested a photo for \"%s\"."
+msgstr ""
+
+#. translators: %d: number of photos.
+#: includes/notes.php:625
+#, php-format
+msgid "Sent %d photo."
+msgid_plural "Sent %d photos."
+msgstr[0] ""
+msgstr[1] ""
+
+#: includes/notes.php:633
+msgid "That is a lot of photos in a short time. Try again in an hour."
+msgstr ""
+
+#: includes/notes.php:662
+msgid "That is a lot of notes in a short time. Try again in an hour."
+msgstr ""
+
+#: includes/notes.php:680 includes/photos.php:357
+msgid "Something went wrong on our side. Try again in a minute."
+msgstr ""
+
+#: includes/notes.php:729
+msgid "Log in to WordPress to do that."
+msgstr ""
+
+#: includes/notes.php:761
+msgid "Unknown status."
+msgstr ""
+
+#: includes/notes.php:922
+msgid "Note"
+msgstr ""
+
+#: includes/notes.php:923
+msgid "From"
+msgstr ""
+
+#: includes/notes.php:927
+msgid "Date"
+msgstr ""
+
+#: includes/notes.php:946
+msgid "Studio reply"
+msgstr ""
+
+#. translators: %s: name of the spot the note is pinned to.
+#: includes/notes.php:957
+#, php-format
+msgid "Pinned to \"%s\""
+msgstr ""
+
+#: includes/notes.php:968 includes/notes.php:992
+msgid "Waiting"
+msgstr ""
+
+#. translators: 1: site name, 2: name of the person.
+#: includes/notes.php:1063
+#, php-format
+msgid "[%1$s] Photo suggested by %2$s"
+msgstr ""
+
+#. translators: 1: site name, 2: name of the person.
+#: includes/notes.php:1066
+#, php-format
+msgid "[%1$s] Reply from %2$s"
+msgstr ""
+
+#. translators: 1: site name, 2: name of the person.
+#: includes/notes.php:1069
+#, php-format
+msgid "[%1$s] New note from %2$s"
+msgstr ""
+
+#. translators: 1: name of the person (and their code label), 2: page title.
+#: includes/notes.php:1074
+#, php-format
+msgid "%1$s replied on %2$s"
+msgstr ""
+
+#. translators: 1: name of the person (and their code label), 2: page title.
+#: includes/notes.php:1074
+#, php-format
+msgid "%1$s left a note on %2$s"
+msgstr ""
+
+#: includes/notes.php:1080
+msgid "Open the note on the page"
+msgstr ""
+
+#: includes/notes.php:1081
+msgid "All notes"
+msgstr ""
+
+#: includes/photos.php:26 includes/photos.php:1213 includes/settings.php:486
+msgid "Client photos"
+msgstr ""
+
+#: includes/photos.php:27
+msgid "Client photo"
+msgstr ""
+
+#: includes/photos.php:57
+msgid "Attached"
+msgstr ""
+
+#: includes/photos.php:58
+msgid "Suggested for a spot"
+msgstr ""
+
+#: includes/photos.php:68
+msgid "With Pro, this photo would already be in place for you to approve."
+msgstr ""
+
+#: includes/photos.php:311
+msgid "Photo"
+msgstr ""
+
+#: includes/photos.php:348
+msgid "This photo can't be read. Try saving it as a JPEG."
+msgstr ""
+
+#. translators: %d: largest photo in MB.
+#: includes/photos.php:385
+#, php-format
+msgid "Each photo can be up to %d MB."
+msgstr ""
+
+#: includes/photos.php:389
+msgid "A photo didn't come through. Try again."
+msgstr ""
+
+#: includes/photos.php:415 includes/photos.php:634
+msgid "This phone photo format can't be read here. Send it as a JPEG: on iPhone, Settings > Camera > Formats > Most Compatible."
+msgstr ""
+
+#: includes/photos.php:423
+msgid "Only photos (JPEG, PNG, WebP) can be sent."
+msgstr ""
+
+#: includes/photos.php:436
+msgid "This photo is too large to work with. Send a smaller copy."
+msgstr ""
+
+#. translators: %d: most photos on one note.
+#: includes/photos.php:709
+#, php-format
+msgid "You can send up to %d photo with a note."
+msgid_plural "You can send up to %d photos with a note."
+msgstr[0] ""
+msgstr[1] ""
+
+#: includes/photos.php:723
+msgid "There is no room for more photos right now. The site owner has been told."
+msgstr ""
+
+#: includes/photos.php:1052 includes/photos.php:1190
+msgid "That photo is gone."
+msgstr ""
+
+#. translators: %s: name of the spot on the page.
+#: includes/photos.php:1096 includes/photos.php:1139
+#, php-format
+msgid "Suggested for \"%s\""
+msgstr ""
+
+#: includes/photos.php:1101
+msgid "Photo from the client"
+msgstr ""
+
+#. translators: %s: name of the person.
+#: includes/photos.php:1118
+#, php-format
+msgid "%s tried to send photos, but the photo storage is full."
+msgstr ""
+
+#. translators: %s: name of the person.
+#: includes/photos.php:1118
+msgid "A client"
+msgstr ""
+
+#. translators: %s: name of the person.
+#: includes/photos.php:1119
+msgid "Delete photos you no longer need, or raise the limit in Settings."
+msgstr ""
+
+#. translators: %s: name of the person.
+#: includes/photos.php:1120 includes/settings.php:487
+msgid "Settings"
+msgstr ""
+
+#. translators: %s: site name.
+#: includes/photos.php:1122
+#, php-format
+msgid "[%s] Photo storage is full"
+msgstr ""
+
+#: includes/photos.php:1144
+msgid "The suggested photo"
+msgstr ""
+
+#: includes/photos.php:1146 includes/photos.php:1253
+msgid "Download original"
+msgstr ""
+
+#: includes/photos.php:1173 includes/photos.php:1242
+msgid "Attached photo"
+msgstr ""
+
+#: includes/photos.php:1175
+msgid "Photos screen"
+msgstr ""
+
+#: includes/photos.php:1192
+msgid "Nothing was deleted."
+msgstr ""
+
+#: includes/photos.php:1195
+msgid "Photo deleted, with its original."
+msgstr ""
+
+#: includes/photos.php:1215
+msgid "Photos clients attached to their notes, and photos they suggested for a spot on a page. They never show on the page itself. Each one keeps its original, which you can download."
+msgstr ""
+
+#. translators: 1: space used, 2: space allowed.
+#: includes/photos.php:1217
+#, php-format
+msgid "Photo storage: %1$s of %2$s used."
+msgstr ""
+
+#: includes/photos.php:1229
+msgid "No photos yet."
+msgstr ""
+
+#: includes/photos.php:1257
+msgid "Delete this photo and its original for good?"
+msgstr ""
+
+#: includes/photos.php:1260
+msgid "Yes, delete"
+msgstr ""
+
+#: includes/settings.php:54
+msgid "Everyone"
+msgstr ""
+
+#: includes/settings.php:55
+msgid "Logged-in users only"
+msgstr ""
+
+#: includes/settings.php:56
+msgid "Only people who open the review link"
+msgstr ""
+
+#: includes/settings.php:136
+msgid "Panel background"
+msgstr ""
+
+#: includes/settings.php:137
+msgid "Card background"
+msgstr ""
+
+#: includes/settings.php:138
+msgid "Text"
+msgstr ""
+
+#: includes/settings.php:139
+msgid "Accent"
+msgstr ""
+
+#: includes/settings.php:140
+msgid "Button"
+msgstr ""
+
+#: includes/settings.php:141
+msgid "Button text"
+msgstr ""
+
+#: includes/settings.php:268
+msgid "Largest photo (MB)"
+msgstr ""
+
+#. translators: %d: upload limit of this server in MB.
+#: includes/settings.php:272
+#, php-format
+msgid "This server accepts up to %d MB per upload. The lower of the two applies."
+msgstr ""
+
+#. translators: %d: upload limit of this server in MB.
+#: includes/settings.php:274
+msgid "Photos per note"
+msgstr ""
+
+#. translators: %d: upload limit of this server in MB.
+#: includes/settings.php:274
+msgid "Up to 3 photos on a note or a reply."
+msgstr ""
+
+#: includes/settings.php:275
+msgid "Photo storage (MB)"
+msgstr ""
+
+#: includes/settings.php:275
+msgid "Counts the display copies and the originals. When it is full, uploads stop and you get an email."
+msgstr ""
+
+#: includes/settings.php:276
+msgid "Photos per hour per visitor"
+msgstr ""
+
+#: includes/settings.php:276
+msgid "Counted by a hashed IP address. The address itself is never stored."
+msgstr ""
+
+#: includes/settings.php:277
+msgid "Minimum time to write a note (ms)"
+msgstr ""
+
+#: includes/settings.php:277
+msgid "Notes sent faster than this after the panel opens are dropped as spam. Logged-in editors skip this."
+msgstr ""
+
+#: includes/settings.php:310
+msgid "No valid email address was entered, so the old list was kept."
+msgstr ""
+
+#. translators: %d: number of notes waiting.
+#: includes/settings.php:474
+#, php-format
+msgid "%d waiting"
+msgid_plural "%d waiting"
+msgstr[0] ""
+msgstr[1] ""
+
+#: includes/settings.php:487 includes/settings.php:537
+msgid "Finishcoat settings"
+msgstr ""
+
+#: includes/settings.php:505
+msgid "Copied"
+msgstr ""
+
+#: includes/settings.php:506
+msgid "Select the link and copy it"
+msgstr ""
+
+#: includes/settings.php:546
+msgid "Suggestions tab"
+msgstr ""
+
+#: includes/settings.php:547
+msgid "Show the tab to"
+msgstr ""
+
+#: includes/settings.php:551
+msgid "Whoever sees the tab still needs a review code to read or send notes. Logged-in editors always see it and need no code."
+msgstr ""
+
+#: includes/settings.php:553
+msgid "Skip these pages"
+msgstr ""
+
+#: includes/settings.php:555
+msgid "Page or post IDs, separated by commas. The tab does not load there."
+msgstr ""
+
+#: includes/settings.php:556
+msgid "Shortcodes: [finishcoat] loads the tab on a page, and [finishcoat board=\"yes\"] also shows the board of every note at that spot."
+msgstr ""
+
+#: includes/settings.php:558
+msgid "Tab label"
+msgstr ""
+
+#: includes/settings.php:561
+msgid "Colors"
+msgstr ""
+
+#: includes/settings.php:565
+msgid "The panel uses your theme's fonts."
+msgstr ""
+
+#: includes/settings.php:567
+msgid "Corner radius (px)"
+msgstr ""
+
+#: includes/settings.php:569
+msgid "Credit"
+msgstr ""
+
+#: includes/settings.php:569
+msgid "Show \"Made with Finishcoat\" in the panel"
+msgstr ""
+
+#: includes/settings.php:569
+msgid "Off unless you turn it on."
+msgstr ""
+
+#: includes/settings.php:572
+msgid "Email"
+msgstr ""
+
+#: includes/settings.php:573
+msgid "Send new notes to"
+msgstr ""
+
+#: includes/settings.php:575
+msgid "Every client note and reply is emailed here through your site's own mail. Separate addresses with commas."
+msgstr ""
+
+#: includes/settings.php:577
+msgid "Limits"
+msgstr ""
+
+#: includes/settings.php:583
+msgid "Pause"
+msgstr ""
+
+#: includes/settings.php:583
+msgid "Pause new notes"
+msgstr ""
+
+#: includes/settings.php:583
+msgid "Clients can still read the notes. Logged-in editors can still reply."
+msgstr ""
+
+#: includes/settings.php:586
+msgid "When the plugin is deleted"
+msgstr ""
+
+#: includes/settings.php:587
+msgid "Data"
+msgstr ""
+
+#: includes/settings.php:587
+msgid "Delete all notes and photos when the plugin is deleted"
+msgstr ""
+
+#: includes/settings.php:587
+msgid "Off by default, so notes and photos stay if you remove the plugin and add it again."
+msgstr ""
+
+#: includes/settings.php:594
+msgid "Test email"
+msgstr ""
+
+#: includes/settings.php:595
+msgid "Sends a short test message to each address above and shows what happened."
+msgstr ""
+
+#: includes/settings.php:599
+msgid "Send test email"
+msgstr ""
+
+#: includes/settings.php:603
+msgid "Help"
+msgstr ""
+
+#: includes/settings.php:604
+msgid "Questions or ideas?"
+msgstr ""
+
+#: includes/settings.php:604
+msgid "Email finishcoat@wilderlabs.studio"
+msgstr ""
+
+#: includes/settings.php:605
+msgid "WordPress.org support forum"
+msgstr ""
+
+#: includes/settings.php:606
+msgid "Finishcoat Pro"
+msgstr ""
+
+#: includes/settings.php:606
+msgid "puts suggested photos in place for you to approve."
+msgstr ""
+
+#: includes/settings.php:620
+msgid "There are no addresses to send to."
+msgstr ""
+
+#. translators: %s: site name.
+#: includes/settings.php:626
+#, php-format
+msgid "This is a test from the Finishcoat settings on %s."
+msgstr ""
+
+#. translators: %s: site name.
+#: includes/settings.php:627
+msgid "If you got it, client note emails will reach this address."
+msgstr ""
+
+#. translators: %s: site name.
+#: includes/settings.php:632
+#, php-format
+msgid "[%s] Finishcoat test email"
+msgstr ""
+
+#. translators: %s: email address.
+#: includes/settings.php:641
+#, php-format
+msgid "%s: sent"
+msgstr ""
+
+#. translators: 1: email address, 2: error message or empty.
+#: includes/settings.php:644
+#, php-format
+msgid "%1$s: failed %2$s"
+msgstr ""
+
+#: includes/settings.php:647
+msgid "Test email handed to the mail server."
+msgstr ""
+
+#: includes/settings.php:647
+msgid "Some test emails failed."
+msgstr ""
+
+#: includes/settings.php:674
+msgid "Thanks for using Finishcoat. Finishcoat Pro, a separate plugin, puts suggested photos in place on the page for you to approve."
+msgstr ""
+
+#: includes/settings.php:675
+msgid "Learn more"
+msgstr ""
+
+#: includes/settings.php:676
+msgid "Dismiss"
+msgstr ""
+
+#: includes/settings.php:702
+msgid "If you have a review code and leave a note on this site with Finishcoat, we store the name you type, your message, the page and the spot on the page it is about, the label of your review code, and any photos you send. Display copies of photos have location and camera data removed. The original files are kept so the site owner can download them. Your IP address is used only as a one-way hash to limit how many notes can be sent in an hour, and is not stored with your note."
+msgstr ""
+
+#: includes/settings.php:703
+msgid "Your browser keeps your name and your review code (for 90 days) so you do not have to type them again. Notes and photos stay on this site until the site owner deletes them. Nothing is sent to other services."
+msgstr ""
