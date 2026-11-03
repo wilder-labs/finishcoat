@@ -124,6 +124,21 @@ function finishcoat_enqueue_front( $forced = false ) {
 }
 
 /**
+ * On a review link (?finishcoat=CODE), take the code out of the address bar first thing in <head>, before analytics
+ * or any other script on the page can read the address. This runs whatever the Show setting is, so the code also
+ * leaves the address on pages where the tab does not load. The script reads the address itself; the code is never
+ * printed into the page.
+ */
+function finishcoat_strip_review_code() {
+	if ( ! isset( $_GET['finishcoat'] ) || finishcoat_is_editor_view() ) { // phpcs:ignore WordPress.Security.NonceVerification.Recommended -- only checks whether the parameter is there; the value is not read here.
+		return;
+	}
+	$js = (string) file_get_contents( plugin_dir_path( FINISHCOAT_FILE ) . 'assets/finishcoat-strip.js' );
+	wp_print_inline_script_tag( $js, array( 'id' => 'finishcoat-strip-js' ) );
+}
+add_action( 'wp_head', 'finishcoat_strip_review_code', 1 );
+
+/**
  * Front-end hook.
  */
 function finishcoat_front_scripts() {

@@ -372,6 +372,8 @@ function finishcoat_project_payload( $slug ) {
 		'active'          => ! finishcoat_setting( 'paused' ),
 		'photo_max_mb'    => finishcoat_photo_max_mb(),
 		'photo_max_files' => (int) finishcoat_setting( 'photo_max_files' ),
+		// The page script waits at least this long before sending, so a quick visitor's note is not dropped as spam.
+		'min_fill_ms'     => (int) finishcoat_setting( 'min_fill_ms' ),
 	);
 	return (array) apply_filters( 'finishcoat_project_shape', $out, $slug );
 }

@@ -14,7 +14,7 @@
   if (!C.lazy) return;
 
   function hasCode() {
-    if (/[?&]finishcoat=[^&#]/.test(location.search)) return true;
+    if (window.FinishcoatUrlCode || /[?&]finishcoat=[^&#]/.test(location.search)) return true;
     try {
       var o = JSON.parse(localStorage.getItem('finishcoat-code:' + (C.project || 'site')) || 'null');
       return !!(o && o.c && +o.exp > Date.now());

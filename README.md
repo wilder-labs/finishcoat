@@ -16,6 +16,12 @@ Download this repository as a zip, rename the folder inside it to `finishcoat` i
 
 Requires WordPress 6.5 or later and PHP 7.4 or later.
 
+## Releasing
+
+1. Set the new version in three places: the `Version:` header and `FINISHCOAT_VERSION` in `finishcoat.php`, and `Stable tag:` in `readme.txt`. Add a changelog entry to `readme.txt`.
+2. Commit, then publish a GitHub release tagged with that version (`1.0.1` or `v1.0.1`).
+3. The `Deploy to WordPress.org` workflow checks the three versions match the tag, then pushes the plugin (without the files in `.distignore`) and the `.wordpress-org` assets to WordPress.org SVN.
+
 ## License
 
 GPLv2 or later. See `LICENSE`.
