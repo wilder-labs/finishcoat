@@ -3,7 +3,7 @@
  * Plugin Name:       Finishcoat
  * Plugin URI:        https://wilderlabs.studio/finishcoat/
  * Description:       Your clients pin notes, replies and photos to any spot on your pages, and you keep the final say.
- * Version:           1.0.0
+ * Version:           1.0.1
  * Requires at least: 6.5
  * Requires PHP:      7.4
  * Author:            Wilder Labs
@@ -20,7 +20,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 	exit;
 }
 
-define( 'FINISHCOAT_VERSION', '1.0.0' );
+define( 'FINISHCOAT_VERSION', '1.0.1' );
 define( 'FINISHCOAT_FILE', __FILE__ );
 define( 'FINISHCOAT_DIR', __DIR__ );
 define( 'FINISHCOAT_URL', plugin_dir_url( __FILE__ ) );
