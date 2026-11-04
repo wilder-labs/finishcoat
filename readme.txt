@@ -4,7 +4,7 @@ Tags: client feedback, website feedback, annotations, design review, comments
 Requires at least: 6.5
 Tested up to: 7.1
 Requires PHP: 7.4
-Stable tag: 1.0.0
+Stable tag: 1.0.1
 License: GPLv2 or later
 License URI: https://www.gnu.org/licenses/gpl-2.0.html
 
@@ -110,10 +110,20 @@ Finishcoat adds a suggested paragraph to Settings > Privacy for your privacy pol
 
 == Changelog ==
 
+= 1.0.1 =
+* Fixed: a note sent quickly could be dropped as spam while the panel said it was sent. The panel now waits for the "Minimum time to write a note" setting, and says so if a note did not go through.
+* Review links: the code now leaves the address bar before any other script on the page runs, so analytics tools never see it. This also works on pages where the tab does not load.
+* Keyboard: Escape in pin mode brings the panel back, focus moves to Cancel while picking a spot, and focus returns to the tab when the panel closes.
+* "Try my photo here" is hidden while a note is sending.
+* Deleting the plugin with "Delete all notes and photos" ticked now also removes the short-lived rate limit entries.
+
 = 1.0.0 =
 * First release: notes, pins, replies, photos on notes, Try my photo here, the board, review codes, email alerts, the Notes and Photos screens, and Settings.
 
 == Upgrade Notice ==
+
+= 1.0.1 =
+Fixes quick notes being dropped as spam, and keeps the review code away from analytics tools.
 
 = 1.0.0 =
 First release.
