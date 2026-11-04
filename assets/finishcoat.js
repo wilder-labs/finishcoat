@@ -50,6 +50,12 @@
     : 'image/jpeg,image/png,image/webp,image/heic,image/heif';
 
   /* ---------- helpers ---------- */
+  /* the focused element, looking inside shadow roots (document.activeElement stops at the shadow host) */
+  function deepActive() {
+    var a = document.activeElement;
+    while (a && a.shadowRoot && a.shadowRoot.activeElement) a = a.shadowRoot.activeElement;
+    return a;
+  }
   function el(tag, attrs, kids) {
     var n = document.createElement(tag);
     if (attrs)
@@ -145,6 +151,17 @@
   /* the review link: ?finishcoat=CODE. The code comes out of the address bar at once, so it is not shared by a
      screenshot or a copied address. Every other parameter and the hash stay. */
   function takeUrlCode() {
+    /* finishcoat-strip.js, printed at the top of <head>, has usually taken it out of the address already */
+    var early = window.FinishcoatUrlCode;
+    if (typeof early === 'string') {
+      window.FinishcoatUrlCode = null;
+      try {
+        early = decodeURIComponent(early.replace(/\+/g, ' '));
+      } catch (e) {
+        /* keep it as it is */
+      }
+      return { code: normCode(early) || '', seen: true };
+    }
     var found = '',
       seen = false;
     var parts = location.search
@@ -185,7 +202,8 @@
     return { code: found, seen: seen };
   }
 
-  /* every request is a POST to this site's admin-ajax.php, so a code never sits in an address or a server log */
+  /* every request is a POST to this site's admin-ajax.php, so after the review link itself the code is never in an
+     address again, and never in another request's address or a server log */
   function api(action, data) {
     var fd = new URLSearchParams();
     fd.append('action', action);
@@ -1406,7 +1424,7 @@
       gUi.r.appendChild(gDrawer);
       var gShow = function (on) {
         if (gDone) return;
-        if (on && !gOpen) gLast = document.activeElement;
+        if (on && !gOpen) gLast = deepActive();
         gOpen = on;
         gDrawer.classList.toggle('fc-on', on);
         gScrim.classList.toggle('fc-on', on && matchMedia('(max-width:900px)').matches);
@@ -2109,7 +2127,7 @@
 
     var lastFocus = null;
     function openDrawer(focusId) {
-      if (!S.open) lastFocus = document.activeElement;
+      if (!S.open) lastFocus = deepActive();
       S.open = true;
       drawer.classList.add('fc-on');
       if (matchMedia('(max-width:900px)').matches) scrim.classList.add('fc-on');
@@ -2157,7 +2175,8 @@
       }
     }
     document.addEventListener('keydown', function (e) {
-      if (e.key === 'Escape' && S.open && !pm) closeDrawer();
+      /* pickKey already handled this Escape (it ends pick mode and brings the drawer back) */
+      if (e.key === 'Escape' && S.open && !pm && !e.defaultPrevented) closeDrawer();
     });
 
     function startReply(n) {
@@ -2256,22 +2275,22 @@
             ? t('Click or tap a photo on the page to try your own photo there.')
             : t('Click the spot your note is about.')
       });
-      var bar = el('div', { cls: 'fc-bar fc-top', role: 'status' }, [
-        say,
-        el('button', {
-          type: 'button',
-          text: t('Cancel'),
-          on: {
-            click: function () {
-              endPick();
-              openDrawer();
-            }
+      var cancelBtn = el('button', {
+        type: 'button',
+        text: t('Cancel'),
+        on: {
+          click: function () {
+            endPick();
+            openDrawer();
           }
-        })
-      ]);
+        }
+      });
+      var bar = el('div', { cls: 'fc-bar fc-top', role: 'status' }, [say, cancelBtn]);
       ui.r.appendChild(hl);
       ui.r.appendChild(layer);
       ui.r.appendChild(bar);
+      /* keyboard users land on Cancel (Escape works too); the closed drawer's controls are hidden */
+      cancelBtn.focus({ preventScroll: true });
       pm = { hl: hl, layer: layer, bar: bar };
       var hov = 0;
       layer.addEventListener('mousemove', function (e) {
@@ -2535,8 +2554,8 @@
     /* ---------- send: a note or reply, with photos when there are any ---------- */
     function send() {
       if (S.busy) return;
-      /* the server drops notes sent faster than its minimum fill time, so a quick person just waits a moment */
-      var wait = 1700 - (Date.now() - (S.shownAt || Date.now()));
+      /* the server drops notes sent faster than its minimum fill time (a setting), so a quick person just waits a moment */
+      var wait = Math.max(1700, (+P.min_fill_ms || 0) + 300) - (Date.now() - (S.shownAt || Date.now()));
       if (S.shownAt && wait > 0 && !S.studio) {
         busy(true);
         setTimeout(function () {
@@ -2637,8 +2656,9 @@
       function done(j) {
         busy(false);
         prog.hidden = true;
-        if (!j || !j.ok) {
-          alertMsg((j && j.message) || t('That did not work.'));
+        /* ok without a note: the server dropped it as spam (too quick). Keep what was typed and say it did not go. */
+        if (!j || !j.ok || !j.note) {
+          alertMsg((j && !j.ok && j.message) || t('That did not work.'));
           // replying to a note someone deleted meanwhile: catch up, and drop the reply if its note is gone (the text stays)
           if (data.parent)
             load().then(function () {
@@ -3119,7 +3139,7 @@
       btn.addEventListener('click', function (e) {
         e.preventDefault();
         e.stopPropagation();
-        if (!cur) return;
+        if (!cur || S.busy) return;
         tryFor = cur;
         btn.hidden = true;
         tryIn.click();
@@ -3129,7 +3149,8 @@
         ly = 0;
       function update() {
         raf = 0;
-        if (pm || closed() || (S.open && innerWidth <= 900)) {
+        /* not while a note is sending: a new try would be put back when the sent one finishes */
+        if (pm || closed() || S.busy || (S.open && innerWidth <= 900)) {
           btn.hidden = true;
           cur = null;
           return;
@@ -3378,6 +3399,7 @@
         P.active = j.project.active;
         P.photo_max_mb = j.project.photo_max_mb;
         P.photo_max_files = j.project.photo_max_files;
+        P.min_fill_ms = +j.project.min_fill_ms || 0;
         limits();
       }
       S.loaded = true;

@@ -54,6 +54,16 @@ function finishcoat_uninstall_site() {
 	foreach ( array( 'finishcoat_waiting', 'finishcoat_rv_all', 'finishcoat_cap_mail' ) as $transient ) {
 		delete_transient( $transient );
 	}
+	// The per-visitor rate limits and queued admin notices have hashed or per-user names, so sweep them by prefix.
+	// They expire within an hour anyway; with a persistent object cache they are not in the options table at all.
+	global $wpdb;
+	$wpdb->query( // phpcs:ignore WordPress.DB.DirectDatabaseQuery.DirectQuery, WordPress.DB.DirectDatabaseQuery.NoCaching -- one-time cleanup on uninstall; there is no API to delete transients by prefix.
+		$wpdb->prepare(
+			"DELETE FROM {$wpdb->options} WHERE option_name LIKE %s OR option_name LIKE %s",
+			$wpdb->esc_like( '_transient_finishcoat_' ) . '%',
+			$wpdb->esc_like( '_transient_timeout_finishcoat_' ) . '%'
+		)
+	);
 	delete_metadata( 'user', 0, 'finishcoat_pro_notice_dismissed', '', true );
 }
 

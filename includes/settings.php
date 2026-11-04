@@ -596,7 +596,8 @@ function finishcoat_settings_page() {
 	echo '<form method="post" action="' . esc_url( admin_url( 'admin-post.php' ) ) . '">';
 	echo '<input type="hidden" name="action" value="finishcoat_test_mail">';
 	wp_nonce_field( 'finishcoat_test_mail' );
-	submit_button( __( 'Send test email', 'finishcoat' ), 'secondary', 'submit', false );
+	// Its own name, so the page has one id="submit" (the Save Changes button above).
+	submit_button( __( 'Send test email', 'finishcoat' ), 'secondary', 'finishcoat-test-mail', false );
 	echo '</form>';
 	echo '</div>';
 
